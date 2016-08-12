@@ -11,11 +11,11 @@ Automating processing of TCR sequencing data based on the Decombinator pipeline.
 
 The automating process combines all the steps above into one workflow using a makefile. The GNU Make website provides a nice, basic overview of what make and makefiles are (ref). 
 
-In order to run the automating script, you will need:
+Here are the things you'll need to run the automating script:
 
 1. the Make program
-2. the automate-decombinator folder 
-3. 
+2. the automate-decombinator folder - contains this README file, Makefile and config.mk 
+3. the Decombinator folder
 
 ** To be continued **
 
