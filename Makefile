@@ -51,6 +51,9 @@ all : dirs I1.fq.gz R1.fq.gz R2.fq.gz Demultiplex moveDemultiplex DcrA DcrB move
 dirs :
 	$(MKDIR_P) $(OUT_DIRS)
 
+getDecombinator :
+	wget 
+
 I1.fq.gz : $(I1_FILES)
 	gunzip -c $^ | gzip >RawData/$@
 

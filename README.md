@@ -1,5 +1,5 @@
 # automate-decombinator
-# developed and tested on Unix system
+developed and tested on Unix system
 
 Automating processing of TCR sequencing data based on the Decombinator pipeline. The pipeline basically goes something like this
 
@@ -14,13 +14,24 @@ The automating process combines all the steps above into one workflow using a ma
 Some of the prerequisites will need to be downloaded from github. On the github page, click on the 'Clone or Download' button, and choose 'Download ZIP'
 
 1. the make program
+
    Unix/Linux systems usually have make installed by default
+   
 1. automate-decombinator
+
    https://github.com/innate2adaptive/automate-decombinator
+   
 2. Decombinator
+
    https://github.com/innate2adaptive/Decombinator
-4. index file - call it index_file.csv
-5. a folder containing the Illumina demultiplexed files - call the folder IlluminaDemultiplexed
+   
+4. index file
+
+   call it index_file.csv
+   
+5. a folder containing the Illumina demultiplexed files
+
+   call the folder IlluminaDemultiplexed
 
 Once it's all set up, fire up the Terminal
 
@@ -40,4 +51,5 @@ To continue with translating to protein sequence (recommended), type
    make TrA TrB move
 
 References:
+
 [1] https://www.gnu.org/software/make/manual/make.html
