@@ -78,9 +78,6 @@ moveDcr :
 Collapse : $(COLLAPSE_SRC)
 	for file in $(DCR_FILES); do echo $$file; $(COLLAPSE_EXE) -in $$file; done
 
-moveColl :
-	$(MV_FILES) Collapsed/
-
 TrA : $(TRANSLATE_SRC)
 	for file in $(COLL_ALPHA); do echo $$file; $(TRANSLATE_EXE) -in $$file -c a -np True; done
 
