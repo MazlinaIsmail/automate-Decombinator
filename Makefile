@@ -1,4 +1,4 @@
-# Last updated: Aug 2016
+# Last updated: Sept 2016
 # MI
 
 ##### Background #####
@@ -39,8 +39,8 @@ DID_BETA = $(filter $(wildcard DualIndexDemultiplexed/*beta*.gz),$(wildcard Dual
 
 DCR_FILES = $(wildcard Decombined/*.gz)
 
-COLL_ALPHA = $(filter $(wildcard dcr_alpha_*.gz),$(wildcard *.gz))
-COLL_BETA = $(filter $(wildcard dcr_beta_*.gz),$(wildcard *.gz))
+COLL_ALPHA = $(filter $(wildcard *alpha*.gz),$(wildcard *.gz))
+COLL_BETA = $(filter $(wildcard *beta*.gz),$(wildcard *.gz))
 
 #
 # main
@@ -82,10 +82,10 @@ Collapse : $(COLLAPSE_SRC)
 	for file in $(DCR_FILES); do echo $$file; $(COLLAPSE_EXE) -in $$file; done
 
 TrA : $(TRANSLATE_SRC)
-	for file in $(COLL_ALPHA); do echo $$file; $(TRANSLATE_EXE) -in $$file -c a -np True; done
+	for file in $(COLL_ALPHA); do echo $$file; $(TRANSLATE_EXE) -in $$file -c a -np; done
 
 TrB : $(TRANSLATE_SRC)
-	for file in $(COLL_BETA); do echo $$file; $(TRANSLATE_EXE) -in $$file -c b -np True; done
+	for file in $(COLL_BETA); do echo $$file; $(TRANSLATE_EXE) -in $$file -c b -np; done
 
 move :
 	mv *.freq.gz Collapsed/ && mv *.gz Translated/
